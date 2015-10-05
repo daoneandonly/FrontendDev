@@ -1,0 +1,281 @@
+/* Geheel van de pagina */
+
+html {
+    font-family: Open sans, sans-serif;
+    background-color: lightgrey;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: goldenrod;
+    font-style: italic;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    
+}
+
+@media all and (min-width: 1000px) {
+    body {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    main { 
+        width: 75%;
+    }
+    
+    aside {
+        background-color: beige;
+        padding: .5em;
+        margin-top: 1em;
+        width: 20%;
+    }
+    
+    body > main + section { 
+        order: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+    
+    body > section > article {
+        background-color: #888;
+        display: flex;
+        border: 5px solid #444;
+        padding: .5em;
+        margin-bottom: 1em;
+        max-width: 35em;
+        
+    }
+    
+    body > section > h2 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    body > section > article > p,
+    body > section > article > blockquote {
+        color: white;
+        font-size: 0.9em;
+    }
+    
+    body > section > article > header,
+    body > section > article > footer{
+        font-size: 0.9em;
+        width: 45%;
+        background-color: #eee;
+        padding: .5em;
+        border-radius: .5em;
+    }
+    
+    body > section > article > footer{
+        font-style: italic;  
+        font-size: 0.8rem;
+    }
+
+}
+
+/* Header */
+
+body > header {
+    width: 100vw;
+    background-image: url(img/cmd_beeldbank_meerdere_02.jpg);
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+body > header > p {
+    background-color: white;
+    text-align: center;
+    margin: 2em auto;
+    padding: .5em;
+    width: 50%;
+    
+}
+
+header > img {
+    max-width: 35em;
+    width: 50%;
+}
+
+img {
+    width: 40em;
+    max-width: 50%;
+    border-radius: .5em;
+}
+nav > ul > li {
+    list-style: none;
+    text-align: center;
+    background-color: #eeeeee;
+    border-radius: .2em;
+    margin: .2em;
+    padding: .5em;
+    width: 90%;
+    border: 2px solid black;
+    
+}
+
+form {
+    display:inline;
+    max-width: 20em;
+    color: white;
+    margin-left: 1em;
+    
+}
+
+/* Navigatie @media  */
+
+@media (min-width: 850px)  {
+    nav > ul > li {
+        float: left;
+        max-width: 10em;
+        transition: all ease-in .25s;
+        box-shadow: 0 0 5px black;
+        border: 1px solid black;
+        margin-left: 1em;
+    }
+
+    nav > ul > li:hover {
+        color: white;
+        background-color: #444444;
+        transform: translateY(-.5em) scale(1.2,1.2);
+    }
+    
+    
+}
+
+article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+article > section{
+    background-color: #eee;
+    margin-top: 1em;
+    width: 100%;
+}
+
+article > section:nth-child(4){
+    width: 100%;
+}
+
+section > p,
+section > h3,
+section > h4 {
+    padding: .5em;
+    text-align: justify
+}
+
+article > section ol {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ol > li {
+    display: inline;
+    width: 10em;
+    text-align: center;
+}
+
+
+main > article > header {
+    background-color: white;
+    margin-top: 1em;
+    text-align: justify;
+    width: 100%;
+    padding: 1em;
+}
+
+@media (min-width: 850px) {
+    main > article > header {
+        padding: 2em 5em 2em 5em;
+    }
+
+    article > header > p,
+    article > header > h2 {
+        max-width: 50rem;
+        width: 70%;
+        margin: 1em auto 0 auto;
+    }
+    
+    article > section { 
+        width: 50%;
+    }
+
+}
+
+
+h1 {
+    Background-color: rgb(218, 165, 32);
+    padding: 1em;
+    text-align: center;
+    width: 70%;
+    margin: 1em auto;
+    margin: 1em auto;
+    }
+
+body > footer {
+    order: 2;
+    background-color: #888888;
+}
+
+body >footer p {
+    color: white;
+}
+
+body > footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+body > footer > section {
+    width: 20em;;
+}
+
+body > footer > :nth-child(5), 
+body > footer > :nth-child(5)> p,
+body > footer > :nth-child(5)> h2 {
+    order: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    align-self: center;
+    width: auto;
+}
+
+body > footer > :nth-child(6) {
+    order: ;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer ul {
+    max-width: 20em;
+    margin: 0;
+    padding: 0 .5em;
+}
